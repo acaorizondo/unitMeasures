@@ -14,7 +14,7 @@ body {
 /* Styling the custom select container */
 .custom-select-container {
     position: relative;
-    width: 1020px; /* Incrementado el ancho para acomodar más controles */
+    width: 1150px; /* Incrementado el ancho para acomodar más controles */
     padding: 20px;
     border: 2px solid #007bff;
     border-radius: 8px;
@@ -149,7 +149,7 @@ input[type="number"] {
     display: flex;
     align-items: center;
     gap: 10px; /* Separación entre etiqueta y valor */
-    margin-bottom: 10px; /* Espacio entre la etiqueta y los controles */
+    margin-bottom: 20px; /* Espacio entre la etiqueta y los controles */
     font-size: 16px; /* Tamaño de fuente */
     color: #333; /* Color del texto */
 }
@@ -224,5 +224,24 @@ button#clearButton:hover {
     background-color: #218838; /* Verde más oscuro */
 }
 
+/*---- Label dinamico ---------------------------------------------------------*/
+
+/* Contenedor para el label dinámico */
+.unit-label-container {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinear hacia la izquierda */
+}
+
+/* Estilo del label dinámico */
+#dynamicUnitLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff; /* Azul como los demás elementos destacados */
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 

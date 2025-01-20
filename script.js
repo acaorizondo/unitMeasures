@@ -174,6 +174,9 @@ function clearForm() {
 
     // Restablecer la etiqueta de la cadena a "N/A"
     unitMeasureValue.textContent = "N/A";
+    
+    // Actualizar el nuevo label dinámico
+    dynamicUnitLabel.textContent = "N/A"; 
 
     // Deshabilitar el botón Accept
     acceptButton.disabled = true;
@@ -182,4 +185,33 @@ function clearForm() {
 // Agregar evento al botón Clear
 clearButton.addEventListener("click", clearForm);
 
+
+// --------------new label ------------------------------------------------------------------------
+// Referencia al nuevo label
+const dynamicUnitLabel = document.getElementById("dynamicUnitLabel");
+
+// Función para actualizar la cadena y el label dinámico
+function updateUnitMeasure() {
+    const primaryUnit = unitSelector.value || "";
+    const quantity1 = quantityInput.value || "";
+    const secondaryUnit = unitSelectorSecondary.value || "";
+    const quantity2 = nestedQuantityInput.value || "";
+    const tertiaryUnit = unitSelectorTertiary.value || "";
+
+    // Concatenar los valores
+    const concatenatedValue = [primaryUnit, quantity1, secondaryUnit, quantity2, tertiaryUnit]
+        .filter(value => value) // Eliminar valores vacíos
+        .join("");
+
+    // Actualizar el texto en el span y el label
+    unitMeasureValue.textContent = concatenatedValue || "N/A";
+    dynamicUnitLabel.textContent = concatenatedValue || "N/A";
+}
+
+// Eventos para actualizar la cadena y el label dinámico
+unitSelector.addEventListener("change", updateUnitMeasure);
+quantityInput.addEventListener("input", updateUnitMeasure);
+unitSelectorSecondary.addEventListener("change", updateUnitMeasure);
+nestedQuantityInput.addEventListener("input", updateUnitMeasure);
+unitSelectorTertiary.addEventListener("change", updateUnitMeasure);
 

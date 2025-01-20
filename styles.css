@@ -1,0 +1,228 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling the custom select container */
+.custom-select-container {
+    position: relative;
+    width: 1020px; /* Incrementado el ancho para acomodar más controles */
+    padding: 20px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: left;
+    overflow: hidden; /* Asegura que el contenido no desborde */
+}
+
+
+/* Heading styling */
+h2 {
+    color: #444;
+    margin-bottom: 30px; /* Aumentado el margen inferior */
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* Wrapper for controls */
+.controls-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Mantener separación uniforme entre controles */
+    flex-wrap: nowrap; /* Asegura que los controles permanezcan en una línea */
+    justify-content: flex-start; /* Alinear los controles hacia la izquierda */
+}
+
+/* Custom select wrapper */
+.custom-select-wrapper {
+    position: relative;
+    flex: 0 0 auto; /* Evitar que el tamaño cambie */
+}
+
+/* Fixed size for the main select */
+.fixed-size {
+    flex: 0 0 auto;
+}
+
+/* Smaller size for secondary and tertiary selects */
+.small-size {
+    flex: 0 0 auto;
+}
+
+/* Styled select dropdowns */
+select {
+    display: block;
+    width: 170px; /* Ancho fijo para todos los select */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input quantity styling */
+input[type="number"] {
+    flex: 0 0 30px; /* Tamaño fijo para campos de cantidad */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ocultar controles secundarios por defecto */
+.hidden {
+    display: none !important;
+}
+
+/* Mostrar controles adicionales y alinear horizontalmente */
+#extra-controls:not(.hidden),
+#nested-controls:not(.hidden) {
+    display: flex;
+    gap: 20px; /* Asegurar un espaciado consistente entre los controles adicionales */
+    align-items: center;
+}
+
+/* Añadir un margen a la derecha del último control en #extra-controls */
+#extra-controls:not(.hidden) {
+    margin-right: 40px; /* Separación entre #extra-controls y #nested-controls */
+}
+
+/* Ajuste adicional para controles secundarios */
+#nested-controls {
+    display: flex;
+    gap: 20px; /* Espaciado uniforme con #extra-controls */
+    align-items: center;
+}
+
+/* Cuando #nested-controls se debe mostrar */
+#nested-controls:not(.hidden) {
+    display: flex;
+}
+
+/* Ajusta el tamaño de los controles secundarios */
+.small-size {
+    flex: 0 0 120px; /* Tamaño consistente con los demás selectores */
+}
+
+#nestedQuantityInput {
+    flex: 0 0 80px; /* Tamaño del input */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste adicional para nested-controls */
+#nested-controls {
+    display: flex;
+    gap: 20px; /* Espaciado uniforme entre los controles */
+    align-items: center; /* Alineación vertical centrada */
+    margin-left: -40px; /* Corre el bloque hacia la derecha */
+    justify-content: flex-start; /* Alinea los elementos internos a la izquierda */
+    flex: 0 0 auto; /* Evita que el contenedor cambie de tamaño automáticamente */
+    position: relative; /* Asegura que el contenedor respete su flujo */
+}
+
+.unit-measure-display {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Separación entre etiqueta y valor */
+    margin-bottom: 10px; /* Espacio entre la etiqueta y los controles */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+.unit-measure-display label {
+    font-weight: bold; /* Resaltar el texto "Unit Measure:" */
+}
+
+.unit-measure-display span {
+    color: #007bff; /* Resaltar el valor con color */
+    font-weight: bold; /* Resaltar el valor */
+}
+
+/* Estilo del contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinear los botones a la derecha */
+    gap: 10px; /* Espaciado entre los botones */
+    margin-top: 20px; /* Separación del formulario */
+}
+
+/* Botones generales */
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón de Accept */
+.accept-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.accept-button:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de Cancel */
+.cancel-button {
+    background-color: #ccc;
+    color: black;
+}
+
+.cancel-button:hover {
+    background-color: #999;
+}
+
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Botón Clear */
+button#clearButton {
+    background-color: #28a745; /* Verde */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón Clear */
+button#clearButton:hover {
+    background-color: #218838; /* Verde más oscuro */
+}
+
+
+

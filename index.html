@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Unit Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="custom-select-container">
+        <h2>Create/Edit Unit of Measure</h2>
+		
+		<div class="unit-measure-display">
+            <label>Unit Measure:</label>
+            <span id="unitMeasureValue">N/A</span>
+        </div>
+		
+        <div class="controls-wrapper">
+            <!-- Primer control -->
+            <div class="custom-select-wrapper fixed-size">
+                <select id="unitSelector">
+                    <option disabled selected value="">Select a Unit...</option>
+                </select>
+            </div>
+            <!-- Controles adicionales (Quantity + Secondary Selector) -->
+            <div id="extra-controls" class="hidden">
+                <input type="number" id="quantityInput" min="1" placeholder="Enter quantity">
+                <div class="custom-select-wrapper small-size">
+                    <select id="unitSelectorSecondary">
+                        <option disabled selected value="">Select a Unit...</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Controles adicionales anidados -->
+            <div id="nested-controls" class="hidden">
+                <input type="number" id="nestedQuantityInput" min="1" placeholder="Enter quantity">
+                <div class="custom-select-wrapper small-size">
+                    <select id="unitSelectorTertiary">
+                        <option disabled selected value="">Select a Unit...</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+		
+		<div class="button-container">
+            <button class="accept-button" id="acceptButton" disabled>Accept</button>
+            <button class="cancel-button">Cancel</button>
+			<button class="clear-button" id="clearButton">Clear</button>
+        </div>
+	
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

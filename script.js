@@ -1,9 +1,10 @@
 // Datos de las unidades de medida organizadas por tipo
 const unitData = {
+    PackType: ["BG", "BTL", "CN", "CS", "JR", "PC", "PK", "ROLL", "TN"],
     Weight: ["KG", "LBS", "OZ", "GR", "MG"],
-    Volume: ["L", "ML", "OZ", "GL", "QT"],
-    Units: ["EA"],
-    PackType: ["CS", "PK", "BG", "TN", "BT"]
+    Volume: ["LT", "ML", "OZFL", "GAL", "QT", "PT", "TBSP"],  
+    Units: ["EA", "BTL", "PC", "DZ"],
+    Length: ["CM", "FT", "IN", "KM", "M", "MI", "MM", "RD", "YD"]
 };
 
 // Referencias
